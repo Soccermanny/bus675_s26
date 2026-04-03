@@ -1,0 +1,20 @@
+{"timestamp": "2026-04-03T16:17:58.608016", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": "CUST95991", "product_id": "PROD31293", "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-03T16:22:27.816180", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": null, "product_id": null, "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-03T16:22:37.807186", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": null, "product_id": null, "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-03T16:42:54.406729", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": null, "product_id": null, "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-03T16:43:17.582055", "filename": "CUST95991_PROD31293_headphones.png", "customer_id": null, "product_id": null, "top_prediction": "loudspeaker", "confidence": 37.75}
+{"timestamp": "2026-04-03T16:46:18.314562", "filename": "CUST11539_PROD52115_speaker.png", "customer_id": null, "product_id": null, "top_prediction": "radio", "confidence": 28.11}
+{"timestamp": "2026-04-03T16:46:18.453484", "filename": "CUST12087_PROD82645_charger.png", "customer_id": null, "product_id": null, "top_prediction": "espresso maker", "confidence": 46.44}
+{"timestamp": "2026-04-03T16:46:18.809784", "filename": "CUST12955_PROD88668_monitor.png", "customer_id": null, "product_id": null, "top_prediction": "stove", "confidence": 16.3}
+{"timestamp": "2026-04-03T17:05:48.047673", "filename": "CUST11539_PROD52115_speaker.png", "customer_id": "11539", "product_id": "52115", "top_prediction": "radio", "confidence": 28.11}
+{"timestamp": "2026-04-03T17:05:48.279884", "filename": "CUST12087_PROD82645_charger.png", "customer_id": "12087", "product_id": "82645", "top_prediction": "espresso maker", "confidence": 46.44}
+{"timestamp": "2026-04-03T17:05:48.459634", "filename": "CUST12955_PROD88668_monitor.png", "customer_id": "12955", "product_id": "88668", "top_prediction": "stove", "confidence": 16.3}
+{"timestamp": "2026-04-03T17:05:48.667634", "filename": "CUST12972_PROD13134_headphones.png", "customer_id": "12972", "product_id": "13134", "top_prediction": "loudspeaker", "confidence": 44.32}
+{"timestamp": "2026-04-03T17:05:48.776405", "filename": "CUST13589_PROD39265_speaker.png", "customer_id": "13589", "product_id": "39265", "top_prediction": "loudspeaker", "confidence": 68.91}
+{"timestamp": "2026-04-03T17:05:48.922140", "filename": "CUST14747_PROD75775_monitor.png", "customer_id": "14747", "product_id": "75775", "top_prediction": "television", "confidence": 34.28}
+{"timestamp": "2026-04-03T17:05:49.176226", "filename": "CUST14902_PROD38500_monitor.png", "customer_id": "14902", "product_id": "38500", "top_prediction": "monitor", "confidence": 46.64}
+{"timestamp": "2026-04-03T17:05:49.318389", "filename": "CUST15283_PROD22013_speaker.png", "customer_id": "15283", "product_id": "22013", "top_prediction": "loudspeaker", "confidence": 65.25}
+{"timestamp": "2026-04-03T17:05:49.455170", "filename": "CUST19537_PROD90191_keyboard.png", "customer_id": "19537", "product_id": "90191", "top_prediction": "mouse", "confidence": 52.51}
+{"timestamp": "2026-04-03T17:05:49.605576", "filename": "CUST22138_PROD83228_game_controller.png", "customer_id": "22138", "product_id": "83228", "top_prediction": "joystick", "confidence": 71.97}
+{"timestamp": "2026-04-03T17:05:49.729547", "filename": "CUST23028_PROD48994_laptop.png", "customer_id": "23028", "product_id": "48994", "top_prediction": "modem", "confidence": 57.47}
+{"timestamp": "2026-04-03T17:05:49.899581", "filename": "CUST24532_PROD23039_game_controller.png", "customer_id": "24532", "product_id": "23039", "top_prediction": "toilet seat", "confidence": 14.37}

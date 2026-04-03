@@ -207,16 +207,92 @@ async def predict(
 
 
 # ============================================================================
-# TODO: Add /health and /stats endpoints (Part 4)
+# Production Monitoring Endpoints
 # ============================================================================
-# Your code here!
-# 
-# /health should return: {"status": "healthy", "model_loaded": true}
-#
-# /stats should read from the log file and return statistics like:
-# - Total items processed
-# - Breakdown by classification
-# - Average confidence score
+
+@app.get("/health")
+def health():
+    """
+    Health check endpoint for load balancers and orchestration systems.
+    
+    Used by container management tools (Kubernetes, Docker Swarm) to determine
+    if the service is ready to accept requests.
+    
+    Returns:
+        Status information about the service
+    """
+    return {
+        "status": "healthy",
+        "model_loaded": True,
+        "service": "Congo Returns Inference API",
+        "version": "1.0.0"
+    }
+
+
+@app.get("/stats")
+def stats():
+    """
+    Get processing statistics from the classification log.
+    
+    Returns aggregate statistics about all classifications processed:
+    - Total number of items processed
+    - Breakdown of classifications by category
+    - Average confidence score across all predictions
+    
+    Returns:
+        Dictionary with operational statistics
+    """
+    # Initialize counters
+    total_processed = 0
+    confidence_sum = 0.0
+    category_counts = {}
+    
+    # If log file doesn't exist, return zeros
+    if not LOG_PATH.exists():
+        return {
+            "total_processed": 0,
+            "by_category": {},
+            "avg_confidence": 0.0,
+            "message": "No classifications logged yet"
+        }
+    
+    # Read JSONL file (one JSON object per line)
+    try:
+        with open(LOG_PATH, 'r') as f:
+            for line in f:
+                if line.strip():  # Skip empty lines
+                    entry = json.loads(line)
+                    
+                    # Increment total count
+                    total_processed += 1
+                    
+                    # Track classification distribution
+                    prediction = entry.get('top_prediction', 'unknown')
+                    category_counts[prediction] = category_counts.get(prediction, 0) + 1
+                    
+                    # Sum confidence for average calculation
+                    confidence = entry.get('confidence', 0)
+                    confidence_sum += confidence
+    except Exception as e:
+        return {
+            "total_processed": -1,
+            "error": f"Error reading log file: {str(e)}"
+        }
+    
+    # Calculate average confidence
+    avg_confidence = round(confidence_sum / total_processed, 2) if total_processed > 0 else 0.0
+    
+    # Sort categories by frequency (most common first)
+    sorted_categories = dict(
+        sorted(category_counts.items(), key=lambda x: x[1], reverse=True)
+    )
+    
+    return {
+        "total_processed": total_processed,
+        "by_category": sorted_categories,
+        "avg_confidence": avg_confidence,
+        "sample_size": total_processed
+    }
 
 
 if __name__ == "__main__":
